@@ -88,6 +88,7 @@ class DatabaseSeeder extends Seeder
 
             ['title' => 'ZSDS Annual Doctoral Colloquium Kicks Off in Riverside',
             'slug' => 'ZSDS Annual Doctoral Colloquium Kicks Off in Riverside',
+            'section'=>'1',
             'summary' => '<img alt="" src="http://www.olivetuniversity.edu/images_articles/files/zinzendorf/co201611.jpg" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
             'content' => Lipsum::medium()->html(2) . '<pre>
 <code class="language-php">protected function getUserByRecaller($recaller)
@@ -108,6 +109,7 @@ class DatabaseSeeder extends Seeder
 
             ['title' => 'Olivet University President Presents at ABHE Workshop',
             'slug' => 'Olivet University President Presents at ABHE Workshop',
+            'section'=>'1',
             'summary' => '<img alt="" src="http://www.olivetuniversity.edu/images_articles/files/gen/ABHE_workshop111.jpg" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
             'content' => Lipsum::medium()->link()->html(8),
             'active' => true,
@@ -115,6 +117,7 @@ class DatabaseSeeder extends Seeder
 
             ['title' => 'Olivet University Holds Fall Convocation Services',
             'slug' => 'Olivet University Holds Fall Convocation Services',
+            'section'=>'1',
             'summary' => '<img alt="" src="http://www.olivetuniversity.edu/images_articles/files/gen/convocation2016_3.jpg" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
             'content' => Lipsum::medium()->link()->html(8),
             'active' => true,
@@ -122,6 +125,7 @@ class DatabaseSeeder extends Seeder
 
             ['title' => 'Olivet University to Open Bachelor of Science Degree in Agriculture',
             'slug' => 'Olivet University to Open Bachelor of Science Degree in Agriculture',
+            'section'=>'1',
             'summary' => '<img alt="" src="http://www.olivetuniversity.edu/images_articles/files/gen/Bachelor-of-Science-in-Agriculture1.jpg" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
             'content' => Lipsum::medium()->link()->html(8),
             'active' => true,
