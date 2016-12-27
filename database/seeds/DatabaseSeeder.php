@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
         DB::table('roles')->insert([
 
             ['title' => 'Administrator', 'slug' => 'admin'],
-            ['title' => 'Redactor', 'slug' => 'redac'],
+            ['title' => 'Editor', 'slug' => 'editor'],
             ['title' => 'User', 'slug' => 'user']
 
         ]);
@@ -23,31 +23,31 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
 
             ['username' => 'GreatAdmin',
-            'email' => 'admin@la.fr',
+            'email' => 'admin@gmail.com',
             'password' => bcrypt('admin'),
             'seen' => true,
             'role_id' => 1,
             'valid' => true,
             'confirmed' => true],
 
-            ['username' => 'GreatRedactor',
-            'email' => 'redac@la.fr',
-            'password' => bcrypt('redac'),
+            ['username' => 'GreatEditor',
+            'email' => 'editor@gmail.com',
+            'password' => bcrypt('editor'),
             'seen' => true,
             'role_id' => 2,
             'valid' => true,
             'confirmed' => true],
 
-            ['username' => 'Walker',
-            'email' => 'walker@la.fr',
-            'password' => bcrypt('walker'),
+            ['username' => 'Micah',
+            'email' => 'micah@gmail.com',
+            'password' => bcrypt('micah'),
             'seen' => false,
             'role_id' => 3,
             'valid' => false,
             'confirmed' => true],
 
             ['username' => 'Slacker',
-            'email' => 'slacker@la.fr',
+            'email' => 'slacker@gmail.com',
             'password' => bcrypt('slacker'),
             'seen' => false,
             'role_id' => 3,
@@ -59,17 +59,17 @@ class DatabaseSeeder extends Seeder
         DB::table('contacts')->insert([
 
             ['name' => 'Dupont',
-            'email' => 'dupont@la.fr',
+            'email' => 'dupont@gmail.com',
             'message' => Lipsum::short()->text(2),
             'seen' => false],
 
             ['name' => 'Durand',
-            'email' => 'durand@la.fr',
+            'email' => 'durand@gmail.com',
             'message' => Lipsum::short()->text(2),
             'seen' => false],
 
             ['name' => 'Martin',
-            'email' => 'martin@la.fr',
+            'email' => 'martin@gmail.com',
             'message' => Lipsum::short()->text(2),
             'seen' => true]
             
@@ -77,18 +77,18 @@ class DatabaseSeeder extends Seeder
 
         DB::table('tags')->insert([
 
-            ['tag' => 'Tag1'],
-            ['tag' => 'Tag2'],
-            ['tag' => 'Tag3'],
-            ['tag' => 'Tag4']
+            ['tag' => 'olivet'],
+            ['tag' => 'riverside'],
+            ['tag' => 'otcs'],
+            ['tag' => 'oit']
 
         ]);
 
         DB::table('posts')->insert([
 
-            ['title' => 'Post 1',
-            'slug' => 'post-1',
-            'summary' => '<img alt="" src="/files/user2/mega-champignon.png" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
+            ['title' => 'ZSDS Annual Doctoral Colloquium Kicks Off in Riverside',
+            'slug' => 'ZSDS Annual Doctoral Colloquium Kicks Off in Riverside',
+            'summary' => '<img alt="" src="http://www.olivetuniversity.edu/images_articles/files/zinzendorf/co201611.jpg" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
             'content' => Lipsum::medium()->html(2) . '<pre>
 <code class="language-php">protected function getUserByRecaller($recaller)
 {
@@ -106,23 +106,23 @@ class DatabaseSeeder extends Seeder
             'active' => true,
             'user_id' => 1],
 
-            ['title' => 'Post 2',
-            'slug' => 'post-2',
-            'summary' => '<img alt="" src="/files/user2/goomba.png" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
+            ['title' => 'Olivet University President Presents at ABHE Workshop',
+            'slug' => 'Olivet University President Presents at ABHE Workshop',
+            'summary' => '<img alt="" src="http://www.olivetuniversity.edu/images_articles/files/gen/ABHE_workshop111.jpg" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
             'content' => Lipsum::medium()->link()->html(8),
             'active' => true,
             'user_id' => 2],
 
-            ['title' => 'Post 3',
-            'slug' => 'post-3',
-            'summary' => '<img alt="" src="/files/user2/rouge-shell.png" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
+            ['title' => 'Olivet University Holds Fall Convocation Services',
+            'slug' => 'Olivet University Holds Fall Convocation Services',
+            'summary' => '<img alt="" src="http://www.olivetuniversity.edu/images_articles/files/gen/convocation2016_3.jpg" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
             'content' => Lipsum::medium()->link()->html(8),
             'active' => true,
             'user_id' => 2],
 
-            ['title' => 'Post 4',
-            'slug' => 'post-4',
-            'summary' => '<img alt="" src="/files/user2/rouge-shyguy.png" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
+            ['title' => 'Olivet University to Open Bachelor of Science Degree in Agriculture',
+            'slug' => 'Olivet University to Open Bachelor of Science Degree in Agriculture',
+            'summary' => '<img alt="" src="http://www.olivetuniversity.edu/images_articles/files/gen/Bachelor-of-Science-in-Agriculture1.jpg" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
             'content' => Lipsum::medium()->link()->html(8),
             'active' => true,
             'user_id' => 2]
