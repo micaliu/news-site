@@ -38,5 +38,7 @@
 
         @endforeach
     </div>
-
+    <div class="row col-lg-12">
+        <div class="pull-right">{!! $sections->links() !!}</div>
+    </div>
 @endsection

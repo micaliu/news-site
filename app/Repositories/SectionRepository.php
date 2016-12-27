@@ -20,8 +20,16 @@ class SectionRepository extends BaseRepository
     {
         return $this->model->paginate($n);
     }
-    protected function Store($inputs)
+    public function getSectionItems()
     {
-        return $this->save($section, $inputs);
+        return $this->model->select('id','name')->orderBy('id', 'asc');
+    }
+    public function store($inputs)
+    {
+        $sect = new Section;
+        $sect->name = $inputs['name'];
+        $sect->save();
+
+        return redirect('/section');
     }
 }

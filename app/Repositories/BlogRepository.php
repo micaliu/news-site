@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\Comment;
+use App\Models\Section;
 
 class BlogRepository extends BaseRepository
 {
@@ -22,6 +23,8 @@ class BlogRepository extends BaseRepository
      */
     protected $comment;
 
+    protected $section;
+
     /**
      * Create a new BlogRepository instance.
      *
@@ -30,11 +33,12 @@ class BlogRepository extends BaseRepository
      * @param  \App\Models\Comment $comment
      * @return void
      */
-    public function __construct(Post $post, Tag $tag, Comment $comment)
+    public function __construct(Post $post, Tag $tag, Comment $comment, Section $section)
     {
         $this->model = $post;
         $this->tag = $tag;
         $this->comment = $comment;
+        $this->section = $section;
     }
 
     /**
@@ -144,7 +148,11 @@ class BlogRepository extends BaseRepository
 
         return $query->paginate($n);
     }
+    public function getSections()
+    {
 
+        return $this->section->select('id','name')->get();
+    }
     /**
      * Get post collection with post slug.
      *

@@ -87,8 +87,9 @@ class BlogController extends Controller
      */
     public function create()
     {
-        $sectionItems = $this->blogRepository->getSectionItems();
-        return view('back.blog.create',$sectionItems);
+        $sections = $this->blogRepository->getSections();
+
+        return view('back.blog.create',compact('sections'));
     }
 
     /**
